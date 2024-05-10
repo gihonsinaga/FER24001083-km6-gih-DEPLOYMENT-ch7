@@ -40,7 +40,7 @@ const Profile = () => {
   };
 
   const IMAGES = {
-    image1: new URL("../src/assets/bg_profile.png", import.meta.url).href,
+    image1: new URL("/assets/bg_profile.png", import.meta.url).href,
   };
   return (
     <>
@@ -64,7 +64,7 @@ const Profile = () => {
         <div className="bg-gray-100  flex justify-center mx-auto shadow-2xl shadow-gray-800 w-[1200px] h-[700px] items-center max-lg:w-[700px] max-lg:h-[630px] max-md:w-[350px] max-md:h-[700px] ">
           <div className="mr-10 w-1/2 flex justify-center items-center bg-gray-500 h-[700px] max-lg:hidden">
             <img
-              src="../src/assets/profile.png"
+              src="/assets/profile.png"
               className="h-[350px] w-[350px] "
               alt=""
             />

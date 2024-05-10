@@ -176,7 +176,7 @@ function Login() {
                 <div className="flex mx-auto px-20  mt-20 mb-60 w-[300px] h-[300px]">
                   <img
                     className="flex mx-auto w-[600px] h-[400px]"
-                    src="../src/assets/carousel6.png "
+                    src="/assets/carousel6.png "
                     alt="First slide"
                   />
                   <div className="mx-auto ">

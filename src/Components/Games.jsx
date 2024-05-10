@@ -150,7 +150,7 @@ const Games = () => {
       {currentItems.length === 0 && (
         <div className="text-center  mt-10 text-lg text-gray-600">
           <img
-            src="../src/assets/search2.png"
+            src="/assets/search2.png"
             width="200"
             height="100"
             className="mx-auto mb-5"

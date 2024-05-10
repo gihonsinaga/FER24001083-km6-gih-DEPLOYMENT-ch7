@@ -162,7 +162,7 @@ const Nav = () => {
                   <p className="flex text-lg font-base text-slate-100 italic cursor-pointer hover:text-primary hover:font-semibold">
                     {userData?.data?.name}{" "}
                     <img
-                      src="../src/assets/icon_profile.png"
+                      src="/assets/icon_profile.png"
                       className="w-[26px] h-[26px] ml-3 "
                       alt=""
                     />
