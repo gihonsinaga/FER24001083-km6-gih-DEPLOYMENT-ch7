@@ -209,7 +209,7 @@ const LandingPage = () => {
             <div className="mt-20">
               <div className="relative">
                 <img
-                  src="/assets/invite_lobo.webp"
+                  src="/assets/ac_cards.avif"
                   className="h-[300px]"
                   alt="stairs"
                 />
