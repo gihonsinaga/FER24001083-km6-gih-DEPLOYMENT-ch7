@@ -145,8 +145,8 @@ function Login() {
                 <div className="flex mx-auto px-20 mt-24 mb-60 w-[300px] h-[300px]">
                   <img
                     className="flex mx-auto w-[600px] h-[350px] "
-                    src="../src/assets/carousel5.png "
-                    alt="First slide"
+                    src="/assets/carousel55.png "
+                    alt="First slide!!"
                   />
                   <div className="mx-auto ">
                     <h3 className=" text-xl text-center leading-5 font-bold text-slate-700 lg:mt-16 mt-8 ">
@@ -160,7 +160,7 @@ function Login() {
                 <div className="flex mx-auto px-20 mt-20 mb-60 w-[300px] h-[300px]">
                   <img
                     className="flex mx-auto w-[600px] h-[400px]"
-                    src="../src/assets/carousel7.png "
+                    src="/assets/carousel7.png "
                     alt="First slide"
                   />
                   <div className="mx-auto ">
