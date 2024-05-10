@@ -150,7 +150,7 @@ function Register() {
                 <div className="flex mx-auto px-20  mt-24 mb-60 w-[300px] h-[300px]">
                   <img
                     className="flex mx-auto w-[600px] h-[350px]"
-                    src="/assets/carousel5.png "
+                    src="/assets/carousel55.png "
                     alt="First slide"
                   />
                   <div className="mx-auto ">
