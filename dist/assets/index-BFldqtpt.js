@@ -16594,7 +16594,7 @@ const kj = (e, t) => async (n) => {
           u.jsx("div", {
             className: "justify-center flex mt-52",
             children: u.jsx("img", {
-              src: "./src/assets/amiibo-lineup-img.avif",
+              src: "/assets/amiibo-lineup-img.avif",
               alt: "",
             }),
           }),
@@ -16649,7 +16649,7 @@ const kj = (e, t) => async (n) => {
                           u.jsx("div", {
                             className: "relative",
                             children: u.jsx("img", {
-                              src: "./src/assets/ac_cards.avif",
+                              src: "/assets/ac_cards.avif",
                               alt: "",
                             }),
                           }),
@@ -16714,7 +16714,7 @@ const kj = (e, t) => async (n) => {
                           u.jsx("div", {
                             className: "relative",
                             children: u.jsx("img", {
-                              src: "./src/assets/inkling.avif",
+                              src: "/assets/inkling.avif",
                               alt: "",
                             }),
                           }),
@@ -16783,7 +16783,7 @@ const kj = (e, t) => async (n) => {
                           u.jsx("div", {
                             className: "relative",
                             children: u.jsx("img", {
-                              src: "./src/assets/cat_mario.avif",
+                              src: "/assets/cat_mario.avif",
                               alt: "",
                             }),
                           }),
@@ -16848,7 +16848,7 @@ const kj = (e, t) => async (n) => {
                           u.jsx("div", {
                             className: "relative",
                             children: u.jsx("img", {
-                              src: "./src/assets/invite_lobo.webp",
+                              src: "/assets/invite_lobo.webp",
                               className: "h-[300px]",
                               alt: "stairs",
                             }),
@@ -16933,7 +16933,7 @@ const kj = (e, t) => async (n) => {
                     "border-2 px-5 py-2 shadow-2xl h-[450px]  cursor-pointer transition duration-300 ease-in-out transform hover:scale-105",
                   children: [
                     u.jsx("img", {
-                      src: "./src/assets/nintendo_switch.png",
+                      src: "/assets/nintendo_switch.png",
                       alt: "",
                     }),
                     u.jsx("h3", {
@@ -16953,7 +16953,7 @@ const kj = (e, t) => async (n) => {
                   className:
                     "border-2 px-5 py-2 shadow-2xl  cursor-pointer transition duration-300 ease-in-out transform hover:scale-105",
                   children: [
-                    u.jsx("img", { src: "./src/assets/wiiu.png", alt: "" }),
+                    u.jsx("img", { src: "/assets/wiiu.png", alt: "" }),
                     u.jsx("h3", {
                       className:
                         "text-xl leading-5 font-semibold text-gray-800 lg:mt-10 mt-8",
@@ -16972,7 +16972,7 @@ const kj = (e, t) => async (n) => {
                     "border-2 px-5 py-2 shadow-2xl  cursor-pointer transition duration-300 ease-in-out transform hover:scale-105",
                   children: [
                     u.jsx("img", {
-                      src: "./src/assets/nintendo_3dx_xl.png",
+                      src: "/assets/nintendo_3dx_xl.png",
                       alt: "",
                     }),
                     u.jsx("h3", {
@@ -16993,7 +16993,7 @@ const kj = (e, t) => async (n) => {
                     "border-2 px-5 py-2 shadow-2xl  cursor-pointer transition duration-300 ease-in-out transform hover:scale-105",
                   children: [
                     u.jsx("img", {
-                      src: "./src/assets/nintendo_3ds.png",
+                      src: "/assets/nintendo_3ds.png",
                       alt: "",
                     }),
                     u.jsx("h3", {
@@ -23761,7 +23761,7 @@ function eP() {
       u.jsx("div", {
         className: "justify-center flex mt-48",
         children: u.jsx("img", {
-          src: "./src/assets/amiibo-lineup-img.avif",
+          src: "/assets/amiibo-lineup-img.avif",
           alt: "",
         }),
       }),

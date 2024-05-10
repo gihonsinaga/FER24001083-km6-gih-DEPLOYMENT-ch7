@@ -23,7 +23,7 @@ const LandingPage = () => {
       <Nav />
 
       <div className="justify-center flex mt-52">
-        <img src="./src/assets/amiibo-lineup-img.avif" alt="" />
+        <img src="/assets/amiibo-lineup-img.avif" alt="" />
       </div>
       <div className="text-center font-bold  font-poppins text-3xl mt-20">
         <h2>
@@ -59,7 +59,7 @@ const LandingPage = () => {
           <div className="md:w-1/2 lg:w-full">
             <div>
               <div className="relative">
-                <img src="./src/assets/ac_cards.avif" alt="" />
+                <img src="/assets/ac_cards.avif" alt="" />
               </div>
 
               <h1 className="text-2xl font-semibold leading-7 sm:pr-20 mt-2 text-gray-800">
@@ -110,7 +110,7 @@ const LandingPage = () => {
 
             <div className="mt-20">
               <div className="relative">
-                <img src="./src/assets/inkling.avif" alt="" />
+                <img src="/assets/inkling.avif" alt="" />
               </div>
 
               <h1 className="text-2xl font-semibold leading-7 sm:pr-20 mt-2 text-gray-800">
@@ -160,7 +160,7 @@ const LandingPage = () => {
           <div className="md:w-1/2 md:ml-6 md:mt-0 mt-9 lg:w-full">
             <div>
               <div className="relative">
-                <img src="./src/assets/cat_mario.avif" alt="" />
+                <img src="/assets/cat_mario.avif" alt="" />
               </div>
 
               <h1 className="text-2xl font-semibold leading-7 sm:pr-20 mt-2 text-gray-800">
@@ -209,7 +209,7 @@ const LandingPage = () => {
             <div className="mt-20">
               <div className="relative">
                 <img
-                  src="./src/assets/invite_lobo.webp"
+                  src="/assets/invite_lobo.webp"
                   className="h-[300px]"
                   alt="stairs"
                 />
@@ -274,7 +274,7 @@ const LandingPage = () => {
         <div className=" bg-gray-50 grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 lg:gap-10 md:gap-12 gap-14 lg:px-9 lg:py-12 py-10 md:px-12 px-4">
           {/* Nintendo Switch */}
           <div className="border-2 px-5 py-2 shadow-2xl h-[450px]  cursor-pointer transition duration-300 ease-in-out transform hover:scale-105">
-            <img src="./src/assets/nintendo_switch.png" alt="" />
+            <img src="/assets/nintendo_switch.png" alt="" />
             <h3 className=" text-xl leading-5 font-semibold text-gray-800 lg:mt-10 mt-8 ">
               Nintendo Switch
             </h3>
@@ -287,7 +287,7 @@ const LandingPage = () => {
           {/* Wii U™ GamePad*/}
 
           <div className="border-2 px-5 py-2 shadow-2xl  cursor-pointer transition duration-300 ease-in-out transform hover:scale-105">
-            <img src="./src/assets/wiiu.png" alt="" />
+            <img src="/assets/wiiu.png" alt="" />
             <h3 className="text-xl leading-5 font-semibold text-gray-800 lg:mt-10 mt-8">
               Wii U™ GamePad
             </h3>
@@ -300,7 +300,7 @@ const LandingPage = () => {
           {/* New Nintendo 3DS™ XL */}
 
           <div className="border-2 px-5 py-2 shadow-2xl  cursor-pointer transition duration-300 ease-in-out transform hover:scale-105">
-            <img src="./src/assets/nintendo_3dx_xl.png" alt="" />
+            <img src="/assets/nintendo_3dx_xl.png" alt="" />
             <h3 className=" text-xl leading-5 font-semibold text-gray-800 lg:mt-10 mt-8 ">
               New Nintendo 3DS™ XL
             </h3>
@@ -314,7 +314,7 @@ const LandingPage = () => {
           {/* Nintendo 3DS™*/}
 
           <div className="border-2 px-5 py-2 shadow-2xl  cursor-pointer transition duration-300 ease-in-out transform hover:scale-105">
-            <img src="./src/assets/nintendo_3ds.png" alt="" />
+            <img src="/assets/nintendo_3ds.png" alt="" />
             <h3 className=" text-xl leading-5 font-semibold text-gray-800 lg:mt-10 mt-8 ">
               Nintendo 3DS™
             </h3>

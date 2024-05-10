@@ -139,7 +139,7 @@ function Home() {
         </div>
       </nav>
       <div className="justify-center flex mt-48">
-        <img src="./src/assets/amiibo-lineup-img.avif" alt="" />
+        <img src="/assets/amiibo-lineup-img.avif" alt="" />
       </div>
       <div class="text-center font-bold text-slate-700 font-poppins text-5xl mt-20">
         <h2>Welcome to amiibo Web</h2>
