@@ -33,93 +33,109 @@ const CardsDetail = () => {
     <div className="">
       <div>
         <button
-          className="bg-black text-white mt-4 ml-5 rounded-3xl py-3 mb-3 px-8 font-medium inline-block mr-4 hover:bg-transparent hover:border-black hover:text-black duration-300 hover:border border border-transparent"
+          className=" bg-slate-700 text-white sm:mt-4 sm:ml-5 max-sm:mt-2 max-sm:ml-2 rounded-3xl sm:py-3 mb-3 sm:px-8 sm:font-medium max-sm:px-5 max-sm:py-1 inline-block mr-4 hover:bg-transparent hover:border-black hover:text-black duration-300 hover:border border border-transparent"
           onClick={() => navigate("/Cards")}
         >
-          back
+          <span className="">←</span>
         </button>
       </div>
-
       <div className="justify-center flex">
-        <button
-          className=" bg-white text-5xl border-b text-slate-700 mt-4 pt-3 pb-4  px-8 font-extrabold inline-block mr-4 hover:bg-transparent hover:border-black hover:text-black duration-300 hover:border  border-transparent"
-          onClick={flipCard}
-        >
-          ➭ Cards Detail
-        </button>
+        <h1 className="text-5xl font-extrabold text-slate-600 max-sm:text-3xl">
+          Cards Detail
+        </h1>
       </div>
 
-      <div>
+      {/* Bagian details */}
+      <div className="">
         <ReactCardFlip flipDirection="horizontal" isFlipped={isFlipped}>
           <div className="card">
             {data && (
-              <div className="container mt-10 justify-center flex w-[1000px] h-[500px] mx-auto  border-2 shadow-xl py-16 shadow-slate-500 ">
-                <div className="">
+              <div className="container sm:mt-10 max-sm:mt-3 justify-between sm:px-40 sm:flex sm:w-[1000px] sm:h-[500px]  mx-auto  border-2 shadow-xl py-16 sm:shadow-slate-500 ">
+                <div className="max-sm:ml-10">
                   <img
                     src={data?.image}
                     alt=""
                     className="h-[300px] mt-5 w-[full] "
                   />
                 </div>
-                <div className="flex flex-col ml-20 ">
-                  <div className="font-extrabold text-slate-600 text-3xl mt-5 mb-2">
+                <div className="flex flex-col max-sm:ml-5 max-sm:mt-5">
+                  <div className=" font-extrabold text-slate-600 sm:text-3xl max-sm:text-lg mt-2 mb-2">
                     {data?.name}
                   </div>
                   <table className="max-w-[70px] ">
                     <tr className="font-extralight  text-slate-500 items-start text-base ">
-                      <td className="mb-6 text-lg font-normal">Character </td>
+                      <td className="mb-6 sm:text-lg max-sm:text-base font-normal">
+                        Character{" "}
+                      </td>
                       <td className="py-1 pl-5 pr-3"> : </td>
-                      <td className="text-lg  font-thin">{data?.character}</td>
+                      <td className="sm:text-lg max-sm:text-base  font-thin">
+                        {data?.character}
+                      </td>
                     </tr>
 
                     <tr className="font-extralight text-slate-500 items-start text-base ">
-                      <td className="mb-6 text-lg font-normal">Type </td>
+                      <td className="mb-6 sm:text-lg max-sm:text-base font-normal">
+                        Type{" "}
+                      </td>
                       <td className="py-1 pl-5 pr-3"> : </td>
-                      <td className="text-lg  font-thin">{data?.type}</td>
+                      <td className="sm:text-lg max-sm:text-base  font-thin">
+                        {data?.type}
+                      </td>
                     </tr>
                   </table>
                   <div className="font-extralight mt-5  text-slate-500 items-start text-base ">
-                    <div className="font-extrabold text-slate-600 text-3xl mt-2 mb-2">
+                    <div className="font-extrabold text-slate-600 sm:text-3xl max-sm:text-lg mt-2 mb-2">
                       {" "}
                       Release Date
                     </div>
                     <table className="">
-                      <tr className="mb-6 text-lg font-normal">
+                      <tr className="mb-6 sm:text-lg max-sm:text-base font-normal">
                         au <td className=" pl-5 pr-3">:</td>{" "}
-                        <td className="text-lg italic font-thin">
+                        <td className="sm:text-lg max-sm:text-base italic font-thin">
                           {data?.release?.au}
                         </td>
                       </tr>
-                      <tr className="mb-6 text-lg font-normal">
+                      <tr className="mb-6 sm:text-lg max-sm:text-base font-normal">
                         eu <td className=" pl-5 pr-3">:</td>{" "}
-                        <td className=" text-lg italic font-thin">
+                        <td className=" sm:text-lg max-sm:text-base italic font-thin">
                           {data?.release?.eu}
                         </td>
                       </tr>
-                      <tr className="mb-6 text-lg font-normal">
+                      <tr className="mb-6 sm:text-lg max-sm:text-base font-normal">
                         jp <td className="pl-5 pr-3">:</td>{" "}
-                        <td className=" text-lg italic font-thin">
+                        <td className="sm:text-lg max-sm:text-base italic font-thin">
                           {data?.release?.jp}
                         </td>
                       </tr>
-                      <tr className="mb-6 text-lg font-normal ">
+                      <tr className="mb-6 sm:text-lg max-sm:text-base font-normal ">
                         na <td className="pl-5 pr-3">:</td>{" "}
-                        <td className=" text-lg italic font-thin">
+                        <td className=" sm:text-lg max-sm:text-base italic font-thin">
                           {data?.release?.na}
                         </td>
                       </tr>
                     </table>
+                    <div>
+                      {" "}
+                      <button
+                        className="text-xl mt-5 font-extrabold  text-slate-900 max-sm:text-xl"
+                        onClick={flipCard}
+                      >
+                        {" "}
+                        ➭ see more
+                      </button>
+                    </div>
                   </div>
                 </div>
               </div>
             )}
           </div>
+          {/* bagian see more */}
           <div className="card ">
             {data && (
-              <div className="container mt-10 px-40 flex justify-center w-[1000px] h-[max] mx-auto  border-2 shadow-xl py-16 shadow-slate-500 ">
+              <div className="container mt-10 sm:px-40 max-sm:px-10 flex justify-center sm:w-[1000px] sm:h-[max] mx-auto  border-2 shadow-xl py-16 shadow-slate-500 ">
                 <div className="flex flex-col ">
                   <div className="font-extralight text-slate-500 items-start text-base ">
-                    <div className="font-extrabold text-slate-600 text-3xl mt-2 mb-5">
+                    <div className="font-extrabold text-slate-600 text-3xl sm:mt-2 mb-5">
                       Nintendo 3DS™
                     </div>
                     <div className="">
@@ -129,7 +145,7 @@ const CardsDetail = () => {
                           {data?.games3DS[0]?.amiiboUsage[0]?.Usage}
                         </div>
                       </div>
-                      <div className="mb-6 text-2xl font-medium">
+                      {/* <div className="mb-6 text-2xl font-medium">
                         {data?.games3DS[1]?.gameName}
                         <div className="text-lg italic font-thin">
                           {data?.games3DS[1]?.amiiboUsage[0]?.Usage}
@@ -158,7 +174,7 @@ const CardsDetail = () => {
                         <div className="text-lg italic font-thin">
                           {data?.games3DS[5]?.amiiboUsage[0]?.Usage}
                         </div>
-                      </div>
+                      </div> */}
                     </div>
                   </div>
                   <br />
@@ -174,7 +190,7 @@ const CardsDetail = () => {
                           {data?.gamesSwitch[0]?.amiiboUsage[0]?.Usage}
                         </div>
                       </div>
-                      <div className="mb-6 text-2xl font-medium">
+                      {/* <div className="mb-6 text-2xl font-medium">
                         {" "}
                         {data?.gamesSwitch[1]?.gameName}
                         <div className="text-lg italic font-thin">
@@ -208,7 +224,7 @@ const CardsDetail = () => {
                         <div className="text-lg italic font-thin">
                           {data?.gamesSwitch[5]?.amiiboUsage[0]?.Usage}
                         </div>
-                      </div>
+                      </div> */}
                     </div>
                   </div>
                   <br />
@@ -224,7 +240,17 @@ const CardsDetail = () => {
                           {data?.gamesWiiU[0]?.amiiboUsage[0]?.Usage}
                         </div>
                       </div>
-                      <div className="mb-6 text-2xl font-medium">
+                      <div>
+                        {" "}
+                        <button
+                          className="text-xl mb-10 italic font-extrabold text-slate-900 max-sm:text-xl"
+                          onClick={flipCard}
+                        >
+                          {" "}
+                          ➭ Details
+                        </button>
+                      </div>
+                      {/* <div className="mb-6 text-2xl font-medium">
                         {data?.gamesWiiU[1]?.gameName}
                         <div className="text-lg italic font-thin">
                           {data?.gamesWiiU[1]?.amiiboUsage[0]?.Usage}
@@ -253,7 +279,7 @@ const CardsDetail = () => {
                         <div className="text-lg italic font-thin">
                           {data?.gamesWiiU[5]?.amiiboUsage[0]?.Usage}
                         </div>{" "}
-                      </div>
+                      </div> */}
                     </div>
                   </div>
                   <br />

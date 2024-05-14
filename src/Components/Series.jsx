@@ -98,45 +98,49 @@ const Series = () => {
         <Nav />
       </div>
 
-      <div className=" mt-48 2xl:container ml-28 2xl:px-20 xl:px-12 sm:px-6 px-5 mb-16">
-        <h1 className="lg:text-5xl text-3xl font-bold leading-9 text-black">
+      <div className="sm:mt-36 max-sm:mt-20 2xl:container px-4 sm:px-6  lg:px-8 sm:mb-5 max-sm:mb-8">
+        <h1 className="text-2xl sm:text-2xl lg:text-3xl font-bold leading-9 text-black">
           Amiibo Series
         </h1>
       </div>
 
-      <div className="flex ml-48 justify-between">
-        <div className="flex">
-          <div className="font-bold text-xl mt-2 mr-4">Sort By :</div>
+      <div className="flex flex-wrap justify-between mx-4 lg:mx-12 mb-4">
+        <div className="sm:flex items-center">
+          <div className="font-bold sm:text-base  my-2 mr-4 max-sm:hidden">
+            Sort By
+          </div>
           <button
             onClick={sortByName}
-            className="bg-black mb-2 flex  text-white  rounded-3xl py-3 px-8 font-medium  mr-4 hover:bg-transparent hover:border-black hover:text-black duration-300 hover:border border border-transparent"
+            className="bg-black text-white rounded-3xl py-2 px-4 sm:py-2 sm:px-4 font-medium text-sm mr-4 hover:bg-transparent hover:border-black hover:text-black duration-300 border border-transparent"
           >
-            Name <div className="ml-5">⇅</div>
+            Name <span className="ml-5">⇅</span>
           </button>
         </div>
 
-        <div className="flex justify-end ">
-          <div className="font-bold text-xl mt-4 mr-4">Search :</div>
+        <div className="sm:flex items-center">
+          <div className="font-bold sm:text-base my-2 mr-4  max-sm:hidden ">
+            Search
+          </div>
           <input
             type="text"
             placeholder="Search ..."
             onChange={handleSearch}
-            className="text-black pl-5 mr-48 bg-slate-100 justify-start border-2 border-black rounded-full p-2 w-[400px] outline-none"
+            className="text-black  pl-4 pr-2 sm:pl-5 bg-slate-100 border-2 border-black rounded-full py-2 sm:py-2 sm:px-4 w-[280px] max-w-xs outline-none max-sm:mt-6 "
           />
         </div>
       </div>
 
-      <div className="flex flex-wrap mx-24 mt-20 mb-5 gap-y-20 gap-x-20 px-16 justify-center">
+      <div className="flex flex-wrap justify-center mx-4 lg:mx-12 mt-10 mb-5 gap-y-10 gap-x-6 sm:gap-x-10">
         {currentItems.map((e) => (
           <div className="flex flex-col justify-center ">
             <div className="group  [perspective:1000px]">
-              <div className="flex flex-col w-[350px] h-[70px] border-2 shadow-xl shadow-slate-500 items-center cursor-pointer transition-all duration-500 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)] [backface-visibility:hidden]">
-                <div className="font-bold text-slate-700 mt-5 text-xl absolute inset-0 ">
+              <div className="flex flex-col max-sm:w-[300px] max-sm:h-[80px] sm:w-[300px] sm:h-[70px] border-2 shadow-xl shadow-slate-500 items-center cursor-pointer transition-all duration-500 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)] [backface-visibility:hidden]">
+                <div className="font-bold text-slate-700 mt-5 text-base absolute inset-0 ">
                   <div className="object-cover text-center shadow-black/40">
                     {e?.name}
                   </div>
                 </div>
-                <div className="font-bold text-slate-700 mt-5 text-xl absolute inset-0 h-[50px] w-full px-12 text-center shadow-xl shadow-slate-500  [transform:rotateY(180deg)] [backface-visibility:hidden]">
+                <div className="font-bold text-slate-700 mt-5 text-base absolute inset-0 h-[50px] w-full px-12 text-center shadow-xl shadow-slate-500  [transform:rotateY(180deg)] [backface-visibility:hidden]">
                   <div className="object-cover text-center shadow-black/40">
                     Code : {e?.key}
                   </div>
@@ -161,11 +165,11 @@ const Series = () => {
       )}
 
       <div>
-        <ul className="flex justify-end mr-48 mt-20">
+        <ul className="flex justify-center sm:justify-end mx-4 sm:mr-12 mt-10 sm:mt-20">
           <li
-            className={`cursor-pointer mx-1 py-3 px-5 bg-black flex mb-2 text-white  rounded-3xl font-medium ml-2 hover:bg-transparent mr-4 hover:border-black hover:text-black duration-300 hover:border border border-transparent ${
+            className={`max-sm:hidden cursor-pointer mx-1 py-2 px-4 sm:py-3 sm:px-5 bg-black text-white rounded-3xl font-medium hover:bg-transparent hover:border-black hover:text-black duration-300 border border-transparent ${
               currentPage === 1
-                ? "pointer-events-none bg-white border-black text-slate-900 "
+                ? "pointer-events-none bg-white border-black text-slate-900"
                 : ""
             }`}
             onClick={() => {
@@ -180,7 +184,7 @@ const Series = () => {
           {pageNumbers.map((pageNumber, index) => (
             <li
               key={index}
-              className={`cursor-pointer mx-1 py-3 px-5  flex mb-2   rounded-3xl font-medium mr-4 duration-300  border-2 hover:bg-black hover:text-white ${
+              className={` sm:inline-block cursor-pointer mx-1 py-2 px-4 sm:py-3 sm:px-5 rounded-3xl font-medium duration-300 border-2 hover:bg-black hover:text-white ${
                 pageNumber === currentPage ? "bg-black text-white" : ""
               }`}
               onClick={() => paginate(pageNumber)}
@@ -190,9 +194,9 @@ const Series = () => {
           ))}
 
           <li
-            className={`cursor-pointer mx-1 py-3 px-5 bg-black flex mb-2 text-white  rounded-3xl font-medium ml-2 hover:bg-transparent hover:border-black hover:text-black duration-300 hover:border border border-transparent ${
+            className={`max-sm:hidden cursor-pointer mx-1 py-2 px-4 sm:py-3 sm:px-5 bg-black text-white rounded-3xl font-medium hover:bg-transparent hover:border-black hover:text-black duration-300 border border-transparent ${
               currentPage === totalPages
-                ? "pointer-events-none  bg-white border-black text-slate-900"
+                ? "pointer-events-none bg-white border-black text-slate-900"
                 : ""
             }`}
             onClick={() => {
