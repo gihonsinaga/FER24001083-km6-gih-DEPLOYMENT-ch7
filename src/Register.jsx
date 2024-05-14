@@ -52,7 +52,7 @@ function Register() {
     <div>
       <Toaster position="top-right" reverseOrder={false} />
 
-      <div className="bg-gradient-to-b from-gray-500 to-gray-300 min-h-screen  ">
+      <div className="sm:bg-gradient-to-b from-gray-500 to-gray-300 min-h-screen  ">
         <div>
           <button
             className="bg-gray-800 text-white mt-4 ml-5 rounded-3xl py-3 mb-3 px-8 font-medium inline-block mr-4 hover:bg-transparent hover:border-black hover:text-black duration-300 hover:border border border-transparent"
@@ -61,9 +61,9 @@ function Register() {
             home
           </button>
         </div>
-        <div className="flex items-center justify-center mt-16">
-          <div className="bg-gray-100 flex shadow-xl w-[1000px] h-[700px] items-center max-lg:w-[700px] max-lg:h-[630px] max-md:w-[350px] max-md:h-[700px]">
-            <div className="w-1/2 px-16 mt-10 max-lg:mx-auto max-lg:w-[600px]">
+        <div className="flex items-center justify-center sm:mt-5">
+          <div className="bg-gray-100 flex  shadow-xl w-[1000px] h-[700px] items-center max-lg:w-[700px] max-lg:h-[630px] max-md:w-[350px] max-md:h-[700px] max-sm:w-[320px] ">
+            <div className="w-1/2 sm:px-20 sm:mt-10 max-sm:px-5 max-lg:mx-auto max-lg:w-[600px]">
               <h2 className="font-bold text-start text-4xl text-slate-800">
                 Sign Up
               </h2>
