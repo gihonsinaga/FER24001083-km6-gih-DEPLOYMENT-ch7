@@ -22,10 +22,10 @@ const LandingPage = () => {
     <div>
       <Nav />
 
-      <div className="justify-center flex mt-52">
+      <div className="max-sm:hidden justify-center flex mt-44">
         <img src="/assets/amiibo-lineup-img.avif" alt="" />
       </div>
-      <div className="text-center font-bold  font-poppins text-3xl mt-20">
+      {/* <div className="sm:hidden text-center font-bold  font-poppins text-3xl mt-20 max-sm:mt-36">
         <h2>
           Click{" "}
           <span>
@@ -39,14 +39,14 @@ const LandingPage = () => {
           </span>
           {""} to get fun with amiibo™ accessories
         </h2>
-        <p className="font-thin text-xl mt-5 ">
+        <p className=" font-thin text-xl mt-5 ">
           Various things about amiibo, such as additional characters, series, or
           other facilities in compatible games.
         </p>
-      </div>
+      </div> */}
 
       {/* unlock cool */}
-      <div className="2xl:mx-auto mt-20 2xl:container 2xl:px-20 xl:px-12 sm:px-6 px-4 py-16">
+      <div className="2xl:mx-auto mt-10 2xl:container 2xl:px-20 xl:px-12 sm:px-6 px-4 py-16">
         <h1 className="lg:text-4xl text-3xl font-semibold leading-9 text-gray-800">
           Unlock cool extras
         </h1>
@@ -73,7 +73,7 @@ const LandingPage = () => {
               </p>
               <button
                 className="flex items-center justify-between w-72 mt-4 bg-gray-800 p-4 hover:bg-gray-700 focus:ring-2 focus:ring-offset-2 focus:ring-gray-700"
-                onClick={() => navigate("/Character")}
+                onClick={() => navigate("/Figures")}
               >
                 <p className="text-base font-medium leading-4 text-white">
                   Read more
