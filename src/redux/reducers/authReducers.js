@@ -12,7 +12,7 @@ const authSlicer = createSlice({
   initialState,
   reducers: {
     setToken: (state, action) => {
-      console.log("action login", action);
+      // console.log("action login", action);
       state.token = action.payload;
     },
     setIsLoggedIn: (state, action) => {

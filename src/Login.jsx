@@ -4,16 +4,16 @@ import "./index.css";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import { Toaster } from "react-hot-toast";
+import { toast, ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import GoogleLogin from "./GoogleLogin";
-import toast from "react-hot-toast";
 import { login } from "./redux/actions/authActions";
 import { useDispatch, useSelector } from "react-redux";
 import { setshowPassword } from "./redux/reducers/authReducers";
 
 function Login() {
-  const [email, setemail] = useState("gihonsinaga@gmail.com");
-  const [password, setPassword] = useState("Gihon123");
+  const [email, setemail] = useState("");
+  const [password, setPassword] = useState("");
 
   const error = useSelector((state) => state.auth.errorr);
   const showPassword = useSelector((state) => state.auth.showPassword);
@@ -49,34 +49,34 @@ function Login() {
 
   return (
     <div className="">
-      <Toaster position="top-right" reverseOrder={false} />
+      <ToastContainer position="top-right" autoClose={3000} />
 
-      <div className="sm:bg-gradient-to-b from-gray-500 to-gray-300 min-h-screen  ">
+      <div className="sm:bg-gradient-to-b from-gray-500 to-gray-500 min-h-screen  ">
         <div>
           <button
-            className="bg-gray-800 text-white mt-4 ml-5 rounded-3xl py-3 mb-3 px-8 font-medium inline-block mr-4 hover:bg-transparent hover:border-black hover:text-black duration-300 hover:border border border-transparent"
+            className=" bg-slate-800 text-white sm:mt-4 sm:ml-5 max-sm:mt-2 max-sm:ml-2 rounded-3xl sm:py-2 mb-3 sm:px-8 sm:font-medium max-sm:px-5 max-sm:py-1 inline-block mr-4 hover:bg-transparent hover:border-black hover:text-black duration-300 hover:border border border-transparent"
             onClick={() => navigate("/")}
           >
-            home
+            <span className="">←</span>
           </button>
         </div>
         <div className="flex items-center justify-center sm:mt-5">
-          <div className="bg-gray-100 flex  shadow-xl w-[1000px] h-[700px] items-center max-lg:w-[700px] max-lg:h-[630px] max-md:w-[350px] max-md:h-[700px] max-sm:w-[320px] ">
-            <div className="w-1/2 sm:px-20 mt-10 max-sm:px-5 max-lg:mx-auto max-lg:w-[600px]">
-              <h2 className="font-bold  text-start text-4xl text-slate-800">
+          <div className="sm:bg-gray-100  flex  sm:shadow-xl w-[800px] h-[550px] items-center max-lg:w-[700px] max-lg:h-[630px] max-md:w-[350px] max-md:h-[700px] max-sm:w-[320px] max-sm:h-[500px]  ">
+            <div className="w-1/2 sm:px-16  sm:mt-7 max-sm:px-7 max-lg:mx-auto max-lg:w-[600px]">
+              <h2 className="font-bold  text-start text-3xl text-slate-800">
                 Welcome
               </h2>
-              <p className="mt-2 text-sm text-gray-500   ">
+              <p className="mt-2 text-xs text-gray-500   ">
                 Sign In with your email and password or Google{" "}
               </p>
 
               <form
                 onSubmit={handleSubmit}
                 action=""
-                className="flex flex-col gap-4"
+                className="flex flex-col gap-2"
               >
                 <input
-                  className="p-4 mt-9 rounded-xl border pl-5 text-sm"
+                  className="p-3 mt-7 rounded-xl border pl-5 text-xs"
                   id="email"
                   type="email"
                   placeholder="email"
@@ -85,7 +85,7 @@ function Login() {
                 />
                 <div className="relative">
                   <input
-                    className="p-4 rounded-xl border w-full pl-5 text-sm"
+                    className="p-3 rounded-xl border w-full pl-5 text-xs"
                     id="password"
                     type={showPassword ? "text" : "password"}
                     placeholder="password"
@@ -106,24 +106,24 @@ function Login() {
                   </svg>
                 </div>
                 {error && <p className="text-red-500 ">{error}</p>}
-                <button className="bg-slate-900 rounded-full mt-5 text-white font-semibold py-3 hover:scale-105 duration-300">
+                <button className="bg-slate-900 rounded-full text-xs mt-5 text-white font-semibold py-3 hover:scale-105 duration-300">
                   Sign In
                 </button>
               </form>
               <div className="mt-6 grid grid-cols-3 items-center text-gray-400">
                 <hr className="border-gray-400" />
-                <p className="text-center text-sm text-black">OR</p>
+                <p className="text-center text-xs text-black">OR</p>
                 <hr className="border-gray-400" />
               </div>
 
               <GoogleLogin />
-              <div className="mt-10 text-xs border-b border-black py-4 text-black"></div>
-              <div className="mt-3 text-xs flex justify-between items-center text-black">
+              <div className="mt-4 text-xs border-b border-black py-4 text-black"></div>
+              <div className="mt-2 text-xs flex justify-between items-center text-black">
                 <p>Don't have an account?</p>
                 <button
                   onClick={() => navigate("/Register")}
                   type="submit"
-                  className="py-3 px-5 bg-slate-900 text-white font-semibold border rounded-full w-[100px] hover:scale-110 duration-300"
+                  className="py-2 px-2 bg-slate-900 text-white text-xs font-medium border rounded-full w-[80px]  hover:scale-110 duration-300"
                 >
                   Sign Up
                 </button>
@@ -131,7 +131,7 @@ function Login() {
             </div>
 
             {/* carousel */}
-            <div className=" w-1/2 bg-gradient-to-b  from-gray-400 to-gray-200 h-[700px] max-lg:hidden">
+            <div className=" w-1/2 bg-gradient-to-b  from-gray-400 to-gray-200 h-[550px] max-lg:hidden">
               <Slider
                 dots={true}
                 infinite={true}
@@ -142,49 +142,49 @@ function Login() {
                 autoplaySpeed={4000}
                 arrows={false}
               >
-                <div className="flex mx-auto px-20 mt-24 mb-60 w-[300px] h-[300px]">
+                <div className="flex mx-auto px-16 mt-16 mb-32 w-[300px] h-[300px]">
                   <img
-                    className="flex mx-auto w-[600px] h-[350px] "
+                    className="flex mx-auto w-[350px] h-[270px] "
                     src="/assets/carousel55.png "
                     alt="First slide!!"
                   />
                   <div className="mx-auto ">
-                    <h3 className=" text-xl text-center leading-5 font-bold text-slate-700 lg:mt-16 mt-8 ">
+                    <h3 className=" text-base text-center leading-5 font-bold text-slate-800 lg:mt-16 mt-8 ">
                       Get more fun with amiibo series
                     </h3>
                   </div>
-                  <p className=" text-sm px-14 text-center leading-6 font-base text-slate-500 mt-3 lg:w-full md:w-9/12 w-full">
+                  <p className=" text-xs px-8 text-center leading-4 font-normal text-slate-500 mt-2 lg:w-full md:w-9/12 w-full">
                     explore a lot of good series from Nintendo
                   </p>
                 </div>
-                <div className="flex mx-auto px-20 mt-20 mb-60 w-[300px] h-[300px]">
+                <div className="flex mx-auto  px-16 mt-16 mb-32 w-[300px] h-[300px]">
                   <img
-                    className="flex mx-auto w-[600px] h-[400px]"
+                    className="flex mx-auto  w-[350px] h-[270px]"
                     src="/assets/carousel7.png "
                     alt="First slide"
                   />
                   <div className="mx-auto ">
-                    <h3 className=" text-xl text-center leading-5 font-bold text-slate-700 lg:mt-10 mt-8 ">
+                    <h3 className="text-base text-center leading-5 font-bold text-slate-800 lg:mt-16 mt-8">
                       More figures from Nintendo series
                     </h3>
                   </div>
-                  <p className=" text-sm px-14 text-center leading-6 font-base text-slate-500 mt-3 lg:w-full md:w-9/12 w-full">
+                  <p className="text-xs px-8 text-center leading-4 font-normal text-slate-500 mt-2 lg:w-full md:w-9/12 w-full">
                     a lot of amiibo figures you can see on this website
                   </p>
                 </div>
 
-                <div className="flex mx-auto px-20  mt-20 mb-60 w-[300px] h-[300px]">
+                <div className="flex mx-auto px-16 mt-16 mb-32 w-[300px] h-[300px]">
                   <img
-                    className="flex mx-auto w-[600px] h-[400px]"
+                    className="flex mx-auto w-[350px] h-[270px]"
                     src="/assets/carousel6.png "
                     alt="First slide"
                   />
                   <div className="mx-auto ">
-                    <h3 className=" text-xl text-center leading-5 font-bold text-slate-700 lg:mt-10 mt-8 ">
+                    <h3 className=" text-base text-center leading-5 font-bold text-slate-800 lg:mt-16 mt-8">
                       Many Characters Nintendo games
                     </h3>
                   </div>
-                  <p className=" text-sm px-14 text-center leading-6 font-base text-slate-500 mt-3 lg:w-full md:w-9/12 w-full">
+                  <p className="text-xs px-8 text-center leading-4 font-normal text-slate-500 mt-2 lg:w-full md:w-9/12 w-full">
                     you can see more character from console games on nintendo
                   </p>
                 </div>

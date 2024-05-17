@@ -3,12 +3,16 @@ import Footer from "./Footer";
 import { useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { DetailAmiibo } from "../redux/actions/figureActions";
+import { usePDF } from "react-to-pdf";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faDownload } from "@fortawesome/free-solid-svg-icons";
 
 const FiguresDetail = () => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
 
   const data = useSelector((state) => state.figures.detail);
+  const { toPDF, targetRef } = usePDF({ filename: `${data?.name}.pdf` });
 
   useEffect(() => {
     dispatch(DetailAmiibo());
@@ -18,7 +22,7 @@ const FiguresDetail = () => {
 
   useEffect(() => {
     if (token === null) {
-      alert("silahkan login dulu");
+      alert("please login first !");
       navigate("/Login");
     }
   }, []);
@@ -27,7 +31,7 @@ const FiguresDetail = () => {
     <div className="">
       <div>
         <button
-          className=" bg-slate-700 text-white sm:mt-4 sm:ml-5 max-sm:mt-2 max-sm:ml-2 rounded-3xl sm:py-3 mb-3 sm:px-8 sm:font-medium max-sm:px-5 max-sm:py-1 inline-block mr-4 hover:bg-transparent hover:border-black hover:text-black duration-300 hover:border border border-transparent"
+          className=" bg-slate-700 text-white sm:mt-4 sm:ml-5 max-sm:mt-2 max-sm:ml-2 rounded-3xl sm:py-2 mb-3 sm:px-8 sm:font-medium max-sm:px-5 max-sm:py-1 inline-block mr-4 hover:bg-transparent hover:border-black hover:text-black duration-300 hover:border border border-transparent"
           onClick={() => navigate("/Figures")}
         >
           <span className="">←</span>
@@ -40,7 +44,10 @@ const FiguresDetail = () => {
       </div>
 
       {data && (
-        <div className="container sm:mt-10 max-sm:mt-3 justify-between sm:px-40 sm:flex sm:w-[1000px] sm:h-[500px]  mx-auto  border-2 shadow-xl py-16 sm:shadow-slate-500 ">
+        <div
+          ref={targetRef}
+          className="container sm:mt-10 max-sm:mt-3 justify-between sm:px-40 sm:flex sm:w-[1000px] sm:h-[500px]   mx-auto  border-2 shadow-xl py-16 sm:shadow-slate-500 "
+        >
           <div className="max-sm:ml-10">
             <img
               src={data?.image}
@@ -118,6 +125,19 @@ const FiguresDetail = () => {
           </div>
         </div>
       )}
+
+      <div className="mt-5 flex justify-end lg:mr-60">
+        <button
+          className=" bg-slate-700 text-white font-bold sm:mt-4 sm:ml-5 max-sm:mt-2 max-sm:ml-2 rounded-3xl sm:py-3 mb-3 sm:px-8 sm:font-medium max-sm:px-5 max-sm:py-1 inline-block mr-4 hover:bg-transparent hover:border-black hover:text-black duration-300 hover:border border border-transparent"
+          onClick={() => toPDF()}
+        >
+          <FontAwesomeIcon
+            icon={faDownload}
+            className="sm:mr-2 max-sm:w-[14px]"
+          />
+          <span className="max-sm:hidden"> Download</span>
+        </button>
+      </div>
 
       <div>
         <Footer />

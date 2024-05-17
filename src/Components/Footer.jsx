@@ -4,14 +4,14 @@ const Footer = () => {
   return (
     <div>
       <footer class="bg-gray-800  dark:bg-gray-900 mt-20">
-        <div class="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
+        <div class="mx-auto sm:px-28 w-full max-w-screen-xl p-4 py-6 lg:py-8">
           <div class="md:flex md:justify-between">
             <div class="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
               <div>
-                <h2 class="mb-6 text-sm font-semibold text-white uppercase dark:text-white">
+                <h2 class="mb-6 text-xs font-semibold text-white uppercase dark:text-white">
                   Resources
                 </h2>
-                <ul class="text-gray-500 dark:text-gray-400 font-medium">
+                <ul class="text-gray-500 dark:text-gray-400 font-normal">
                   <li class="mb-4">
                     <a href="" class="hover:underline">
                       React
@@ -25,10 +25,10 @@ const Footer = () => {
                 </ul>
               </div>
               <div>
-                <h2 class="mb-6 text-sm font-semibold text-white uppercase dark:text-white">
+                <h2 class="mb-6 text-xs font-semibold text-white uppercase dark:text-white">
                   Follow us
                 </h2>
-                <ul class="text-gray-500 dark:text-gray-400 font-medium">
+                <ul class="text-gray-500 dark:text-gray-400 font-normal">
                   <li class="mb-4">
                     <a href="" class="hover:underline ">
                       Github
@@ -42,10 +42,10 @@ const Footer = () => {
                 </ul>
               </div>
               <div>
-                <h2 class="mb-6 text-sm font-semibold text-white uppercase dark:text-white">
+                <h2 class="mb-6 text-xs font-semibold text-white uppercase dark:text-white">
                   Legal
                 </h2>
-                <ul class="text-gray-500 dark:text-gray-400 font-medium">
+                <ul class="text-gray-500 dark:text-gray-400 font-normal">
                   <li class="mb-4">
                     <a href="" class="hover:underline">
                       Privacy Policy
@@ -62,7 +62,7 @@ const Footer = () => {
           </div>
           <hr class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
           <div class="sm:flex sm:items-center sm:justify-between">
-            <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">
+            <span class="text-xs text-gray-500 sm:text-center dark:text-gray-400">
               © 2024{" "}
               <a href="" class="hover:underline">
                 amiibo™

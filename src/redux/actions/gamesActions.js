@@ -10,7 +10,7 @@ export const CharacterAmiibo = () => async (dispatch, getState) => {
         headers: { accept: "application/json" },
       }
     );
-    console.log("response data", response.data);
+    // console.log("response data", response.data);
     const amiiboData = response.data.amiibo.map((item) => ({
       key: item.key,
       name: item.name,

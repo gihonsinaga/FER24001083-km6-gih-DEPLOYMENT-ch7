@@ -1,7 +1,5 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-scroll";
-import { FaTimes } from "react-icons/fa";
-import { CiMenuFries } from "react-icons/ci";
 import { useLocation, useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { getMe, logout } from "../redux/actions/authActions";
@@ -28,12 +26,15 @@ const Nav = () => {
   };
 
   const activeStyle = {
-    borderBottom: "2px solid white",
+    borderBottom: "2px solid #cbd5e1",
   };
 
   const handleLogout = () => {
-    dispatch(logout());
-    navigate("/Login");
+    const confirmLogout = window.confirm("Are you sure you want to logout?");
+    if (confirmLogout) {
+      dispatch(logout());
+      navigate("/Login");
+    }
   };
 
   const toggleDropdown = () => {
@@ -42,34 +43,34 @@ const Nav = () => {
 
   //mobile web
   const content = (
-    <div className="lg:hidden block absolute top-16 w-full left-0 right-0 bg-gradient-to-l from-gray-700 to-gray-800 transition">
+    <div className="lg:hidden block absolute top-10 w-full left-0 right-0 bg-gradient-to-l from-gray-700 to-gray-800 transition">
       <ul className="text-center text-base p-4">
         <li
-          className="my-4 py-4 font-poppins border-b border-slate-800 hover:bg-slate-800 hover:rounded"
+          className="my-4 py-4 font-poppins border-b border-slate-600 hover:bg-slate-800 hover:rounded"
           onClick={() => navigate("/LandingPage")}
         >
           Home
         </li>
         <li
-          className="my-4 py-4 font-poppins border-b border-slate-800 hover:bg-slate-800 hover:rounded"
+          className="my-4 py-4 font-poppins border-b border-slate-600 hover:bg-slate-800 hover:rounded"
           onClick={() => navigate("/Figures")}
         >
           Figures
         </li>
         <li
-          className="my-4 py-4 font-poppins border-b border-slate-800 hover:bg-slate-800 hover:rounded"
+          className="my-4 py-4 font-poppins border-b border-slate-600 hover:bg-slate-800 hover:rounded"
           onClick={() => navigate("/Cards")}
         >
           Cards
         </li>
         <li
-          className="my-4 py-4 font-poppins border-b border-slate-800 hover:bg-slate-800 hover:rounded"
+          className="my-4 py-4 font-poppins border-b border-slate-600 hover:bg-slate-800 hover:rounded"
           onClick={() => navigate("/Series")}
         >
           Series
         </li>
         <li
-          className="my-4 py-4 font-poppins border-b border-slate-800 hover:bg-slate-800 hover:rounded"
+          className="my-4 py-4 font-poppins border-b border-slate-600 hover:bg-slate-800 hover:rounded"
           onClick={() => navigate("/Games")}
         >
           Games
@@ -81,7 +82,7 @@ const Nav = () => {
     // pc web
 
     <nav>
-      <div className="nav flex bg-gradient-to-r from-gray-800 to-gray-700 fixed top-0 w-full justify-between  h-10vh z-50 text-white sm:px-20 py-5 flex-1 ">
+      <div className="nav flex bg-gradient-to-r  from-gray-800 to-gray-700 fixed top-0 w-full justify-between  h-10vh z-50 text-slate-300 sm:px-20 py-4 flex-1 ">
         <div>{click && content}</div>
         <button
           className="block pr-24 sm:hidden transition"
@@ -100,7 +101,7 @@ const Nav = () => {
                 smooth={true}
                 onClick={() => navigate("/LandingPage")}
               >
-                <li className="font-poppins font-base text-base  transition cursor-pointer">
+                <li className="font-poppins font-medium text-sm  transition cursor-pointer">
                   Home
                 </li>
               </Link>
@@ -113,7 +114,7 @@ const Nav = () => {
               >
                 <li
                   style={isActive("/") ? activeStyle : null}
-                  className="font-poppins font-base text-base  transition border-b-2 border-transparent hover:border-white cursor-pointer"
+                  className="font-poppins font-medium text-sm  transition border-b-2 border-transparent hover:border-white cursor-pointer"
                 >
                   Figures
                 </li>
@@ -127,7 +128,7 @@ const Nav = () => {
               >
                 <li
                   style={isActive("/") ? activeStyle : null}
-                  className="font-poppins font-base text-base  transition border-b-2 border-transparent hover:border-white cursor-pointer"
+                  className="font-poppins font-medium text-sm  transition border-b-2 border-transparent hover:border-white cursor-pointer"
                 >
                   Cards
                 </li>
@@ -141,7 +142,7 @@ const Nav = () => {
               >
                 <li
                   style={isActive("/") ? activeStyle : null}
-                  className="font-poppins font-base text-base  transition border-b-2 border-transparent hover:border-white cursor-pointer"
+                  className="font-poppins font-medium text-sm  transition border-b-2 border-transparent hover:border-white cursor-pointer"
                 >
                   Series
                 </li>
@@ -155,7 +156,7 @@ const Nav = () => {
               >
                 <li
                   style={isActive("/") ? activeStyle : null}
-                  className="font-poppins font-base text-base  transition border-b-2 border-transparent hover:border-white cursor-pointer"
+                  className="font-poppins font-medium text-sm  transition border-b-2 border-transparent hover:border-white cursor-pointer"
                 >
                   Games
                 </li>
@@ -172,11 +173,11 @@ const Nav = () => {
                 className="text-white cursor-pointer hover:text-primary"
               >
                 {userData && (
-                  <p className="flex text-base font-base text-slate-100 italic cursor-pointer hover:text-primary hover:font-semibold">
+                  <p className="flex text-sm font-medium text-slate-100 italic cursor-pointer hover:text-primary hover:font-semibold">
                     {userData?.data?.name}{" "}
                     <img
                       src="/assets/icon_profile.png"
-                      className="w-[26px] h-[26px] ml-3 "
+                      className="w-[20px] h-[20px] ml-3 "
                       alt=""
                     />
                   </p>

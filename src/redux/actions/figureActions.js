@@ -33,7 +33,7 @@ export const DetailAmiibo = (props) => async (dispatch) => {
       }
     );
 
-    console.log("response data detail", response.data);
+    // console.log("response data detail", response.data);
 
     dispatch(setDetail(response.data.amiibo[0]));
     return response.data.amiibo[0];

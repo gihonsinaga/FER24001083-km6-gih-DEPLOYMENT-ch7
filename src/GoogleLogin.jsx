@@ -19,7 +19,7 @@ function GoogleLogin({ buttonText }) {
     <>
       <button
         onClick={() => loginWithGoogle()}
-        className="bg-white border py-3 w-full rounded-full mt-5 shadow-md flex justify-center items-center text-sm hover:scale-105 duration-300 text-gray-700"
+        className="bg-white border py-2 w-full text-xs rounded-full mt-5 shadow-md flex justify-center items-center hover:scale-105 duration-300 text-gray-700"
       >
         <svg
           className="mr-3"
