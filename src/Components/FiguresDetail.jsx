@@ -48,11 +48,11 @@ const FiguresDetail = () => {
           ref={targetRef}
           className="container sm:mt-10 max-sm:mt-3 justify-between sm:px-40 sm:flex sm:w-[1000px] sm:h-[500px]   mx-auto  border-2 shadow-xl py-16 sm:shadow-slate-500 "
         >
-          <div className="max-sm:ml-10">
+          <div className="px-3">
             <img
               src={data?.image}
               alt=""
-              className="sm:h-[300px] mt-5 sm:w-[250px] "
+              className="sm:h-[300px] mt-5 sm:w-[250px] mx-auto"
             />
           </div>
           <div className="flex flex-col max-sm:ml-5 max-sm:mt-5">

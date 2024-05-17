@@ -65,11 +65,11 @@ const CardsDetail = () => {
             {data && (
               <div className="container sm:mt-10 max-sm:mt-3 justify-between sm:px-40 sm:flex sm:w-[1000px] sm:h-[500px]   mx-auto  border-2 shadow-xl py-16 sm:shadow-slate-500 ">
                 {" "}
-                <div className="max-sm:">
+                <div className="px-3">
                   <img
                     src={data?.image}
                     alt=""
-                    className="sm:h-[300px] sm:mt-5 sm:w-[250px] max-sm:w-[320px] "
+                    className="sm:h-[300px] sm:mt-5 sm:w-[250px] max-sm:w-[320px] mx-auto "
                   />
                 </div>
                 <div className="flex flex-col max-sm:ml-5">
