@@ -63,15 +63,16 @@ const CardsDetail = () => {
         <ReactCardFlip flipDirection="horizontal" isFlipped={isFlipped}>
           <div className="card" ref={targetRefFront}>
             {data && (
-              <div className="container sm:mt-10 max-sm:mt-3 justify-between sm:px-56 sm:pr-60 sm:flex sm:w-[1000px] sm:h-[500px] max-sm:w-[270px]  mx-auto  border-2 shadow-xl sm:py-16 max-sm:pb-5 sm:shadow-slate-500 ">
+              <div className="container sm:mt-10 max-sm:mt-3 justify-between sm:px-40 sm:flex sm:w-[1000px] sm:h-[500px]   mx-auto  border-2 shadow-xl py-16 sm:shadow-slate-500 ">
+                {" "}
                 <div className="max-sm:">
                   <img
                     src={data?.image}
                     alt=""
-                    className="sm:h-[300px] sm:mt-5 sm:w-[250px]  "
+                    className="sm:h-[300px] sm:mt-5 sm:w-[250px] max-sm:w-[320px] "
                   />
                 </div>
-                <div className="flex flex-col max-sm:ml-5 max-sm:mt-5">
+                <div className="flex flex-col max-sm:ml-5">
                   <div className=" font-extrabold text-slate-600 sm:text-3xl max-sm:text-lg mt-5 mb-2">
                     {data?.name}
                   </div>
